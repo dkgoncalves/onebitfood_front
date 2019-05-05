@@ -13,6 +13,7 @@ export default {
   searchRestaurants: (search) => url.get(`/restaurants/search?q=${search}`),
   getRestaurant: (id) => url.get(`restaurants/${id}`),
   loadCategories: () => url.get("/categories"),
+  loadOrder: (id) => url.get(`orders/${id}`),
 
   createOrder: (order, products_order, address) => {
     let new_product_orders = products_order.map(function (product_order) {
